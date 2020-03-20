@@ -26,9 +26,9 @@ module.exports = {
             .setAuthor(member.user.username, member.user.displayAvatarURL())
             .setThumbnail(member.user.displayAvatarURL())
             .setColor("RANDOM")
-            .setDescription(`**Nickname:** ${member.displayName}\n **Discord Tag:** ${member.user.tag}\n **Discord ID:** ${member.user.id
-            }\n **Status:** ${stat}\n **Satus Message:** *"${member.presence.game ? member.presence.game.state : none}"*\n **Roles:** ${roles
-            }\n\n **Joined at:** ${joined}\n **Created at**: ${created}`)
+            .setDescription(`**Nickname:** ${member.displayName}\n**Discord Tag:**${member.user.tag}\n**Discord ID:** ${member.user.id
+            }\n**Status:** ${stat}\n**Satus Message:** *"${member.presence.game ? member.presence.game.state : none}"*\n**Roles:** ${roles
+            }\n\n**Account joined server at:** ${joined}\n**Account created at**: ${created}`)
 
         message.channel.send(embed);
     }

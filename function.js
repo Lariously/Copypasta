@@ -21,6 +21,7 @@ module.exports = {
     },
 
     formatDate: function(date) {
-        return new Intl.DateTimeFormat('en-US').format(date);
+        const options1 = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('en-US', options1).format(date);
     }
 }
