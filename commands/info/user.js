@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { getMember, formatDate } = require("../../function.js");
 
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
         if (member.presence.status === "online") stat = "Online";
         if (member.presence.status === "offline") stat = "Offline";
 
-        const embed = new RichEmbed()
+        const embed = new MessageEmbed()
             .setAuthor(member.user.username, member.user.displayAvatarURL)
             .setThumbnail(member.user.displayAvatarURL)
             .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
