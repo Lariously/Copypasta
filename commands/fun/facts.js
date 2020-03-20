@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js")
+const { MessageEmbed } = require("discord.js")
 const request = require('snekfetch')
 module.exports = {
     name: "fact",
@@ -23,7 +23,7 @@ module.exports = {
                             text = '**' + value.toString() + '**'
                         }
                     }
-                const embed = new RichEmbed()
+                const embed = new MessageEmbed()
                     .setColor("RANDOM")
                     .setDescription(`${text}`)
                 message.channel.send(embed)

@@ -31,7 +31,7 @@ module.exports = {
                 .setTitle(title)
                 .setURL(allowed[randomnumber].data.url)
                 .setImage(allowed[randomnumber].data.url)
-                .setFooter(`👍 ${allowed[randomnumber].data.ups} | r/${allowed[randomnumber].data.subreddit}`)
+                .setFooter(`👍 ${allowed[randomnumber].data.ups} | 💬 ${allowed[randomnumber].data.num_comments} | r/${allowed[randomnumber].data.subreddit}`)
             message.channel.send(embed)
         } catch (err) {
             return console.log(err);

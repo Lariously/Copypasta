@@ -22,7 +22,7 @@ module.exports = {
                 //     definition = mess
             
                 let embed = new MessageEmbed()
-                .setColor("Random")
+                .setColor("#f0bf4c")
                 .setAuthor(`Urban Dictionary | "${word}"`, image)
                 .setDescription(`**Definition:** ${definition || "No definition"}\n\n**Example:** ${example || "No example"}\n[Click here!](${permalink || "https://urbandictionary.com/"})`)
                 .setThumbnail(image)

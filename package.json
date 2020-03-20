@@ -12,6 +12,7 @@
     "ascii-table": "0.0.9",
     "discord.js": "^12.0.2",
     "dotenv": "^8.2.0",
+    "ms": "^2.1.2",
     "snekfetch": "^4.0.4",
     "urban": "^0.3.2"
   }
