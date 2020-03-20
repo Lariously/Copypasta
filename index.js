@@ -18,10 +18,11 @@ client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         game: {
-            name: "for new Copypastas",
-            type: "WATCHING"
+            name: "for new copypastas",
+            type: "Watching",
+            url:"https://www.twitch.tv/WesternCucks"
         }
-    }); 
+    });
 })
 
 client.on("message", async message => {
