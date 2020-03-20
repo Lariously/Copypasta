@@ -1,5 +1,5 @@
 const { RichEmbed } = require("discord.js");
-const { getMember, formatDate } = require("../../functions.js");
+const { getMember, formatDate } = require("../../function.js");
 
 module.exports = {
     name: "whois",
