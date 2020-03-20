@@ -23,12 +23,12 @@ module.exports = {
         if (member.presence.status === "offline") stat = "Offline";
 
         const embed = new MessageEmbed()
-            .setAuthor(member.user.username, member.user.displayAvatarURL)
-            .setThumbnail(member.user.displayAvatarURL)
-            .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
-            .setDescription(`**Nickname/Tag:** ${member.displayName} | ${member.user.tag}\n **Discord ID:** ${member.user.id
-            }\n **Status/Status Message:** ${stat} | *"${member.presence.game ? member.presence.game.state : none}"*\n **Roles:** ${roles, true
-            }\n\n **Joined at:** ${joined}\n **Created at**: ${created, true}`)
+            .setAuthor(member.user.username, member.user.displayAvatarURL())
+            .setThumbnail(member.user.displayAvatarURL())
+            .setColor("RANDOM")
+            .setDescription(`**Nickname:** ${member.displayName}\n **Discord Tag:** ${member.user.tag}\n **Discord ID:** ${member.user.id
+            }\n **Status:** ${stat}\n **Satus Message:** *"${member.presence.game ? member.presence.game.state : none}"*\n **Roles:** ${roles
+            }\n\n **Joined at:** ${joined}\n **Created at**: ${created}`)
 
         message.channel.send(embed);
     }
