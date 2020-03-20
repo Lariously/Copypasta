@@ -27,7 +27,7 @@ module.exports = {
             .setThumbnail(member.user.displayAvatarURL)
             .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
             .setDescription(`**Nickname/Tag:** ${member.displayName} | ${member.user.tag}\n **Discord ID:** ${member.user.id
-            }\n **Status/Status Message:** ${stat} | *"${member.user.presence.game.name}"*\n **Roles:** ${roles, true
+            }\n **Status/Status Message:** ${stat} | *"${member.user.presence.game.name ? member.presence.game.state : none}"*\n **Roles:** ${roles, true
             }\n\n **Joined at:** ${joined}\n **Created at**: ${created, true}`)
 
         message.channel.send(embed);
