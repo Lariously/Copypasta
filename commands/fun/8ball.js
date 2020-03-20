@@ -5,7 +5,7 @@ module.exports = {
     description: "Ask the bot a question and get a reply",
     run: async (bot, message, args) => {
 
-        if (!args[0]) return message.channel.send(`**Please ask a question. e.g. **\`,8ball <question>\``)
+        if (!args[0]) return message.channel.send(`**Please ask a question. e.g. **\`-8ball <question>\``)
       
         let answers = [
             "**it is certain**",
