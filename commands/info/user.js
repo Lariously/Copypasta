@@ -17,18 +17,18 @@ module.exports = {
         const created = formatDate(member.user.createdAt);
 
         let none = "None"
-        if (member.presence.status === "dnd") stat = "Do Not Disturb";
-        if (member.presence.status === "idle") stat = "Idle";
-        if (member.presence.status === "online") stat = "Online";
-        if (member.presence.status === "offline") stat = "Offline";
+        if (member.presence.status === "dnd") stat = "🔴";
+        if (member.presence.status === "idle") stat = "🟠";
+        if (member.presence.status === "online") stat = "🟢";
+        if (member.presence.status === "offline") stat = "⚪";
 
         const embed = new MessageEmbed()
             .setAuthor(member.user.username, member.user.displayAvatarURL())
             .setThumbnail(member.user.displayAvatarURL())
             .setColor("RANDOM")
-            .setDescription(`**Nickname:** ${member.displayName}\n**Discord Tag:**${member.user.tag}\n**Discord ID:** ${member.user.id
-            }\n**Status:** ${stat}\n**Satus Message:** *"${member.presence.game ? member.presence.game.state : none}"*\n**Roles:** ${roles
-            }\n\n**Account joined server at:** ${joined}\n**Account created at**: ${created}`)
+            .setDescription(`**Nickname:** ${member.displayName}\n**Discord Tag:** ${member.user.tag}\n**Discord ID:** ${member.user.id
+            }\n**Status:** ${stat} ${member.presence.game ? member.presence.game.state : none}\n**Roles:** ${roles
+            }\n\n**Account joined server on:** ${joined}\n**Account created on:** ${created}`)
 
         message.channel.send(embed);
     }
