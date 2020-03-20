@@ -2,15 +2,15 @@ const { RichEmbed } = require("discord.js");
 const { getMember, formatDate } = require("../../function.js");
 
 module.exports = {
-    name: "whois",
-    aliases: ["who", "user", "info"],
+    name: "profile",
+    aliases: ["whois", "user", "info", "profile"],
     description: "Returns user information",
     usage: "[username | id | mention]",
     run: (client, message, args) => {
         const member = getMember(message, args.join(" "));
 
         const joined = formatDate(member.joinedAt);
-        const roles = member.roles
+        const roles = member.roles.cache
             .filter(r => r.id !== message.guild.id)
             .map(r => r).join(", ") || 'none';
 
